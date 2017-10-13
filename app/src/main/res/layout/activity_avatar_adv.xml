@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBECEB"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_user_info_avatar_row"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorSetItemBack"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/SettingLeftTextView"
+            android:text="Profile Photo @WeChat"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <View style="@style/SettingItemDivider" />
+
+
+        <ImageView
+            android:id="@+id/iv_user_info_avatar"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_user_info_avatar_row_qq"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorSetItemBack"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/SettingLeftTextView"
+            android:text="Profile Photo @ QQ"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <View style="@style/SettingItemDivider" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

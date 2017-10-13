@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nshane.avatar.MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_avatar_adv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Base Avatar Advanced"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select Avatar"
+        android:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+
+</LinearLayout>
