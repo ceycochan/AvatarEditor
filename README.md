@@ -4,7 +4,7 @@
 ## Demo Description：
 A demo for upload user avatar profile, which including WeChat & QQ style,and profile clip function.
 
-####See more @Preview
+####See more @PREVIEW
 
 ## Preview
 
