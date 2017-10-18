@@ -32,8 +32,12 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.nshane.avatar.BuildConfig;
 import com.nshane.avatar.R;
 import com.nshane.avatar.img.GlideCircleTransform;
+import com.nshane.avatar.utils.LogUtil;
+import com.nshane.avatar.views.ImagePagerActivity;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -104,7 +108,6 @@ public class AvatarActivityAdv extends AppCompatActivity {
                     }
                     String cropImagePath = getRealFilePathFromUri(getApplicationContext(), uri);
                     Bitmap bitMap = BitmapFactory.decodeFile(cropImagePath);
-                    // 这里只是方便指向
                     if (type == 2 || type == 1) {
 
 
@@ -138,13 +141,18 @@ public class AvatarActivityAdv extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_user_info_avatar:
-                //点击自己头像可看大图
+                LogUtil.d("cg", "commence view avatar HD");
+                int position = (int) Math.random() * 1;
+                ImagePagerActivity.ImageSize imageSize = new ImagePagerActivity.ImageSize(getWindow().getDecorView().getMeasuredWidth(), getWindow().getDecorView().getMeasuredHeight());
+                List<String> photoUrls = new ArrayList<String>();
+                photoUrls.add("http://down.meetu.co/meetu/20171012/e24ac760f8f34b55b25d211aabb260ac.jpg");
+                photoUrls.add("http://down.meetu.co/meetu/20171012/e24ac760f8f34b55b25d211aabb260ac.jpg");
+                ImagePagerActivity.startImagePagerActivity(this, photoUrls, 0, imageSize);
                 break;
             case R.id.ll_user_info_avatar_row:
                 type = 2;
                 uploadHeadImage();
                 break;
-
             case R.id.ll_user_info_avatar_row_qq:
                 type = 1;
                 uploadHeadImage();

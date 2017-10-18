@@ -45,6 +45,11 @@
             android:name=".ui.ClipImageActivity"
             android:enabled="true"
             android:exported="false" />
+
+        <activity
+            android:name=".views.ImagePagerActivity"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>

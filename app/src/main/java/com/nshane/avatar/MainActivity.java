@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.nshane.avatar.img.GlideImageLoader;
 import com.nshane.avatar.img.GlideCircleTransform;
+import com.nshane.avatar.img.GlideImageLoader;
 import com.nshane.avatar.ui.AvatarActivityAdv;
 
 import rain.coder.photopicker.controller.PhotoPickConfig;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         btn_avatar = (Button) findViewById(R.id.btn_avatar);
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_avatar_adv = (Button) findViewById(R.id.btn_avatar_adv);
         btn_avatar_adv.setOnClickListener(this);
         iv_show = (ImageView) findViewById(R.id.iv_show);
+        iv_show.setOnClickListener(this);
 
     }
 
@@ -43,6 +45,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_avatar_adv:
                 AvatarActivityAdv.startAvatarEdit(this);
+                break;
+            case R.id.iv_show:
+                //点击看大图
+                /**
+                 * base interface call back, user avatar contains normal & HD
+                 */
+                break;
             default:
                 break;
         }
